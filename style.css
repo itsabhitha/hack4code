@@ -1,0 +1,173 @@
+/* General reset */
+body, h1, h2, p, ul, li, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    height: 100vh; /* Ensure the body takes full height */
+    margin: 0;
+}
+
+/* Header navigation */
+header {
+    background-color: #35424a;
+    color: white;
+    padding: 10px 0;
+    position: fixed; /* Keep header fixed */
+    top: 0;
+    width: 100%;
+    z-index: 10; /* Ensure it’s above other elements */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo img {
+    width: 150px;
+}
+
+nav .nav-links {
+    list-style-type: none;
+}
+
+nav .nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section styles for Main, Login, Logout, and Sign-Up pages */
+.welcome-section, .signup-section, .login-section, .logout-section {
+    background-image: url('/image.png'); /* Use your preferred image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(100, 17, 60);
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    padding: 0 20px;
+    padding-top: 60px; /* Add padding-top to ensure content is not hidden by fixed header */
+}
+
+/* Centered Overlay */
+.welcome-section::before, .signup-section::before, .login-section::before, .logout-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay */
+    z-index: 1;
+}
+
+/* Container for forms */
+.signup-container, .login-container, .logout-container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    /* Ensure container is properly spaced from the top */
+    margin-top: 1.5cm; /* Position it 1.5cm below the header */
+}
+
+/* Alignment */
+.signup-section, .login-section, .logout-section {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: flex-start; /* Align to the top */
+    padding-left: 10%; /* Adjust this value to fit your design */
+}
+
+.signup-container, .login-container, .logout-container {
+    margin-left: 0; /* Align container to the left */
+    margin-right: auto; /* Pushes the container to the left */
+}
+
+.signup-container h2, .login-container h2, .logout-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #35424a;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45575e;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #35424a;
+    color: white;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    background-color: #35424a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #45575e;
+}
